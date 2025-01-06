@@ -3,6 +3,7 @@ var wms_layers = [];
 
         var lyr_GoogleSatellite_0 = new ol.layer.Tile({
             'title': 'Google Satellite',
+            'type':'base',
             'opacity': 1.000000,
             
             
@@ -57,7 +58,7 @@ var lyr_Lotes_3 = new ol.layer.Vector({
                 title: '<img src="styles/legend/Lotes_3.png" /> Lotes'
             });
 
-lyr_GoogleSatellite_0.setVisible(true);lyr_1011_PuntosLinderos_1.setVisible(false);lyr_Rutas_2.setVisible(true);lyr_Lotes_3.setVisible(true);
+lyr_GoogleSatellite_0.setVisible(true);lyr_1011_PuntosLinderos_1.setVisible(true);lyr_Rutas_2.setVisible(true);lyr_Lotes_3.setVisible(true);
 var layersList = [lyr_GoogleSatellite_0,lyr_1011_PuntosLinderos_1,lyr_Rutas_2,lyr_Lotes_3];
 lyr_1011_PuntosLinderos_1.set('fieldAliases', {'n': 'n', 'lon': 'lon', 'lat': 'lat', });
 lyr_Rutas_2.set('fieldAliases', {'begin': 'begin', 'end': 'end', });
@@ -65,7 +66,7 @@ lyr_Lotes_3.set('fieldAliases', {'begin': 'begin', 'end': 'end', 'País': 'País
 lyr_1011_PuntosLinderos_1.set('fieldImages', {'n': '', 'lon': '', 'lat': '', });
 lyr_Rutas_2.set('fieldImages', {'begin': '', 'end': '', });
 lyr_Lotes_3.set('fieldImages', {'begin': 'TextEdit', 'end': 'TextEdit', 'País': '', 'Región': '', 'Departamento': '', 'Provincia': '', 'Municipio': '', 'Corregimiento': '', 'Vereda': '', 'Código de Lote': '', });
-lyr_1011_PuntosLinderos_1.set('fieldLabels', {'n': 'no label', 'lon': 'no label', 'lat': 'no label', });
+lyr_1011_PuntosLinderos_1.set('fieldLabels', {'n': 'inline label - always visible', 'lon': 'inline label - always visible', 'lat': 'inline label - always visible', });
 lyr_Rutas_2.set('fieldLabels', {'begin': 'no label', 'end': 'no label', });
 lyr_Lotes_3.set('fieldLabels', {'begin': 'hidden field', 'end': 'hidden field', 'País': 'inline label - always visible', 'Región': 'inline label - always visible', 'Departamento': 'inline label - always visible', 'Provincia': 'inline label - always visible', 'Municipio': 'inline label - always visible', 'Corregimiento': 'inline label - always visible', 'Vereda': 'inline label - always visible', 'Código de Lote': 'inline label - always visible', });
 lyr_Lotes_3.on('precompose', function(evt) {
